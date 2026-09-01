@@ -1,0 +1,54 @@
+.note {
+  --note-bg: var(--light-color);
+  --note-fg: var(--text-color);
+  --note-accent: var(--link-color);
+
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border-left: 4px solid transparent;
+  background-color: var(--note-bg);
+  color: var(--note-fg);
+}
+
+.note .icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.note p {
+  margin: 0;
+}
+
+.note p.note-heading {
+  font-weight: 600;
+}
+
+.note.accent-border {
+  border-left-color: var(--note-accent);
+}
+
+.note.no-icon .icon {
+  display: none;
+}
+
+.note.warning {
+  --note-bg: #fff4e5;
+  --note-fg: #7a4a00;
+  --note-accent: #b56a00;
+}
+
+.note.error {
+  --note-bg: #fdeaea;
+  --note-fg: #7a1212;
+  --note-accent: #c62828;
+}
+
+.note.success {
+  --note-bg: #e8f5e9;
+  --note-fg: #205723;
+  --note-accent: #2e7d32;
+}
