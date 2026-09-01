@@ -1,0 +1,16 @@
+# Content & Feature Index
+
+Tracks test/demo pages authored in da.live and the block features they exercise. Update this whenever a new test page or block variant is added.
+
+| Path | Purpose | Block(s) | Status | PR |
+| --- | --- | --- | --- | --- |
+| Site-wide (`styles/styles.css`) | Day 1: updated global color tokens (`--background-color`, `--text-color`, `--link-hover-color`) | — | Live on main | [#1](https://github.com/Shekhar-sj/ssj-eds-da/pull/1) |
+| `/banner-test` | Day 2: Banner block — image + title over full-width backdrop, background color optional (row 3), defaults to blue. `Banner (dark)` variant added; CMS authoring of the dark rows pending. | `banner` | Live on main | [#2](https://github.com/Shekhar-sj/ssj-eds-da/pull/2) |
+
+## Columns
+
+- **Path**: da.live document path (same path on `.aem.page` / `.aem.live`)
+- **Purpose**: what the page demonstrates and any notable edge cases covered
+- **Block(s)**: block name(s) used on the page
+- **Status**: `Draft` (local/da.live only, not merged), `In PR` (link included), `Live on main`
+- **PR**: link to the PR that introduced/last touched the related code, if any
