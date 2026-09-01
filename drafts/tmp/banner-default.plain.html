@@ -1,0 +1,99 @@
+﻿<div>
+  <h1>Banner block - edge cases</h1>
+
+  <div class="banner">
+    <div>
+      <div>
+        <picture>
+          <img src="https://picsum.photos/id/1015/800/600" alt="Lighthouse on a rocky beach">
+        </picture>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>Default blue background (no color authored)</div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="banner">
+    <div>
+      <div>
+        <picture>
+          <img src="https://picsum.photos/id/1015/800/600" alt="Lighthouse on a rocky beach">
+        </picture>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>Custom authored color (dark red)</div>
+      <div></div>
+    </div>
+    <div>
+      <div>#8b1e1e</div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="banner">
+    <div>
+      <div>
+        <picture>
+          <img src="https://picsum.photos/id/1015/800/600" alt="Lighthouse on a rocky beach">
+        </picture>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>Empty color row is treated the same as a missing row</div>
+      <div></div>
+    </div>
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="banner dark">
+    <div>
+      <div>
+        <picture>
+          <img src="https://picsum.photos/id/1015/800/600" alt="Lighthouse on a rocky beach">
+        </picture>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>Dark variant, no color authored (should be dark grey)</div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="banner dark">
+    <div>
+      <div>
+        <picture>
+          <img src="https://picsum.photos/id/1015/800/600" alt="Lighthouse on a rocky beach">
+        </picture>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div>Dark variant, custom color still wins</div>
+      <div></div>
+    </div>
+    <div>
+      <div>#8b1e1e</div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
