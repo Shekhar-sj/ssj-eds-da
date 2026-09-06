@@ -1,0 +1,80 @@
+.employee-list {
+  margin: 24px 0;
+}
+
+.employee-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--body-font-size-s);
+}
+
+/* Mobile: stacked cards, header hidden, labels from data-label */
+.employee-list thead {
+  display: none;
+}
+
+.employee-list tbody tr {
+  display: block;
+  margin-bottom: 12px;
+  border: 1px solid var(--light-color);
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.employee-list tbody td {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px 0;
+}
+
+.employee-list tbody td::before {
+  content: attr(data-label);
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.employee-list-empty {
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.employee-list-load-more {
+  display: flex;
+  margin: 28px auto 0;
+}
+
+@media (width >= 600px) {
+  .employee-list thead {
+    display: table-header-group;
+  }
+
+  .employee-list tbody tr {
+    display: table-row;
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid var(--light-color);
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .employee-list th,
+  .employee-list tbody td {
+    display: table-cell;
+    text-align: left;
+    padding: 12px 16px;
+  }
+
+  .employee-list th {
+    border-bottom: 2px solid var(--dark-color);
+    font-weight: 700;
+  }
+
+  .employee-list tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .employee-list tbody td::before {
+    content: none;
+  }
+}
