@@ -19,4 +19,4 @@ indices:
       image:
         select: head > meta[property="og:image"]
         value: |
-          match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
+          attribute(el, 'content')
