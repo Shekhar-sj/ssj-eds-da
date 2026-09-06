@@ -30,6 +30,8 @@ Tracks test/demo pages authored in da.live and the block features they exercise.
 
 | `helix-sitemap.yaml` (+ `helix-query.yaml`) | Day 4 (#4): explicit **sitemap configuration** — `helix-sitemap.yaml` with a `default` sitemap sourced from `/query-index.json`, `destination: /sitemap.xml`, `lastmod: YYYY-MM-DD`. Also added a **`robots`** property to `helix-query.yaml` (required when both index and sitemap are manually configured, so the sitemap excludes `noindex` pages). EDS already auto-serves `/sitemap.xml` from the index; this makes it explicit/configurable. Regenerate via a reindex (`POST admin.hlx.page/index/…/*`, anonymous-accessible here) if it doesn't rebuild automatically. Note: `*.aem.live`/`*.aem.page` serve a blocking `robots.txt` (`Disallow: /`) to avoid duplicate-content penalties — the real robots.txt applies on the production host. Verified on main: `/sitemap.xml` → 200 with 15 content URLs + `<lastmod>` (`/nav` & `/footer` auto-excluded as partials), `robots` column present in `query-index.json`, and Admin API trigger `POST admin.hlx.page/sitemap/{org}/{site}/main/*` → 204. Repo code (YAML). | — | Live on main | [#15](https://github.com/Shekhar-sj/ssj-eds-da/pull/15) |
 
+| `404.html` | Day 4 (#5): custom, on-brand **404 page** — restyled the boilerplate `404.html` with the project palette (giant `404` filled with `--link-color`, centered layout, friendly headline "This page took a wrong turn" + detail line, primary "Go home" button; existing same-origin "Go back" JS and `sampleRUM('404')` preserved). Tested locally: an unknown path returns HTTP `404` with the styled body. Repo code (HTML/CSS only). | — | In PR | — |
+
 ## Columns
 
 - **Path**: da.live document path (same path on `.aem.page` / `.aem.live`)
